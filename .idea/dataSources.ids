@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - simple_cms_development@localhost" uuid="cfc4dfec-ab59-44b9-ba6e-863315fa758e">
+    <database-info product="MySQL" version="5.5.5-10.1.13-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="information_schema"/>
+      <schema id="2" name="test"/>
+      <schema id="3" name="simple_cms_development">
+        <visible>1</visible>
+      </schema>
+      <schema id="4" name="accountspayable"/>
+      <schema id="5" name="admin"/>
+      <schema id="6" name="authapp"/>
+      <schema id="7" name="classicmodels"/>
+      <schema id="8" name="dbpdo"/>
+      <schema id="9" name="dbtest"/>
+      <schema id="10" name="mailing_list"/>
+      <schema id="11" name="mycms_development"/>
+      <schema id="12" name="mysql"/>
+      <schema id="13" name="my_guitar_shop1"/>
+      <schema id="14" name="my_guitar_shop2"/>
+      <schema id="15" name="newapp"/>
+      <schema id="16" name="performance_schema"/>
+      <schema id="17" name="phpmyadmin"/>
+      <schema id="18" name="phpproject"/>
+      <schema id="19" name="portfolio_php"/>
+      <schema id="20" name="sql_tutorial"/>
+      <schema id="21" name="users"/>
+      <table id="22" parent="3" name="admin_users"/>
+      <table id="23" parent="3" name="admin_users_pages"/>
+      <table id="24" parent="3" name="pages"/>
+      <table id="25" parent="3" name="schema_migrations"/>
+      <table id="26" parent="3" name="section_edits"/>
+      <table id="27" parent="3" name="sections"/>
+      <table id="28" parent="3" name="subjects"/>
+      <table id="29" parent="3" name="ar_internal_metadata"/>
+      <column id="30" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="31" parent="22" name="first_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="32" parent="22" name="last_name">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="33" parent="22" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)|0</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="34" parent="22" name="username">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="35" parent="22" name="hashed_password">
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="36" parent="22" name="created_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="37" parent="22" name="updated_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="38" parent="22" name="index_admin_users_on_username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="39" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="23" name="admin_user_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="41" parent="23" name="page_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="42" parent="23" name="index_admin_users_pages_on_admin_user_id_and_page_id">
+        <columns>admin_user_id
+page_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <column id="43" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="44" parent="24" name="subject_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="45" parent="24" name="name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="46" parent="24" name="permalink">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="47" parent="24" name="position">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="48" parent="24" name="visible">
+        <data-type>tinyint(1)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="49" parent="24" name="created_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="50" parent="24" name="updated_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="51" parent="24" name="index_pages_on_permalink">
+        <columns>permalink</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="52" parent="24" name="index_pages_on_subject_id">
+        <columns>subject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="53" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="54" parent="25" name="version">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <index id="55" parent="25" name="unique_schema_migrations">
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="56" parent="25" name="unique_schema_migrations">
+        <columns>version</columns>
+        <underlying-index>unique_schema_migrations</underlying-index>
+      </key>
+      <column id="57" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="58" parent="26" name="admin_user_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="59" parent="26" name="section_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="60" parent="26" name="summary">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="61" parent="26" name="created_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="62" parent="26" name="updated_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="63" parent="26" name="index_section_edits_on_admin_user_id_and_section_id">
+        <columns>admin_user_id
+section_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="64" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="65" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="66" parent="27" name="page_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="67" parent="27" name="name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="68" parent="27" name="position">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="69" parent="27" name="visible">
+        <data-type>tinyint(1)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="70" parent="27" name="content_type">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="71" parent="27" name="content">
+        <data-type>text|0</data-type>
+      </column>
+      <column id="72" parent="27" name="created_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="73" parent="27" name="updated_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="74" parent="27" name="index_sections_on_page_id">
+        <columns>page_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="75" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="76" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="77" parent="28" name="name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="78" parent="28" name="position">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="79" parent="28" name="visible">
+        <data-type>tinyint(1)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="80" parent="28" name="created_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="81" parent="28" name="updated_at">
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="82" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="83" parent="29" name="key">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="84" parent="29" name="value">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="85" parent="29" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="86" parent="29" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="87" parent="29" name="PRIMARY">
+        <columns>key</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
