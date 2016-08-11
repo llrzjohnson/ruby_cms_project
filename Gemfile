@@ -6,6 +6,7 @@ gem 'rails', '5.0.0'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
+gem "acts_as_list", "~> 0.3.0"
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.0'
 
@@ -19,10 +20,10 @@ gem 'mysql2'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-#gem 'jquery-rails'
+gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-#gem 'turbolinks'
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 1.2'
@@ -33,7 +34,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

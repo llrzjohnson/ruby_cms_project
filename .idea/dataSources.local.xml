@@ -7,5 +7,11 @@
       <introspection-scope>:</introspection-scope>
       <resolve-scope>:</resolve-scope>
     </data-source>
+    <data-source name="PostgreSQL - simple_cms_development@localhost" uuid="5d4ed8ca-224e-4e29-b67b-88d772fa62f3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-scope>simple_cms_development:public,pg_catalog,postgres</introspection-scope>
+      <resolve-scope>simple_cms_development:public,postgres</resolve-scope>
+    </data-source>
   </component>
 </project>
