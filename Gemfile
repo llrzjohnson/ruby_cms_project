@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'pg'
 
 gem "acts_as_list", "~> 0.3.0"
 # Use SCSS for stylesheets
@@ -34,7 +34,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -46,3 +46,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # gem 'debugger', group: [:development, :test]
 
 gem 'tzinfo-data'
+ruby '2.2.4'
